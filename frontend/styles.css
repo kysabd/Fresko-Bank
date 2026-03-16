@@ -1,10 +1,11 @@
 :root {
-  --bg: #e8eef5;
-  --card: #ffffff;
+  --bg: #0f172a;
+  --card: rgba(255, 255, 255, 0.95);
   --text: #1f2a38;
-  --accent: #1565c0;
-  --accent-dark: #0f4a91;
-  --muted: #667788;
+  --accent: #3b82f6;
+  --accent-dark: #1e40af;
+  --muted: #4b5563;
+  --text-light: #ffffff;
 }
 html,
 body {
@@ -12,19 +13,45 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
-  background: linear-gradient(135deg, #cfd9e8 0%, #eaf0f8 100%);
+  background: radial-gradient(circle at 20% 20%, #2f4f85 0%, #0f172a 45%, #020617 100%);
 }
+
 .page-wrapper {
   min-height: 100%;
   display: grid;
   place-items: center;
   padding: 1rem;
+  position: relative;
+}
+.lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+.lang-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+.lang-btn.active {
+  background: rgba(255, 255, 255, 0.15);
 }
 .login-card {
   width: min(380px, 95vw);
   background: var(--card);
   border-radius: 16px;
-  box-shadow: 0 14px 40px rgba(34, 49, 77, 0.2);
+  box-shadow: 0 14px 40px rgba(4, 12, 32, 0.45);
   padding: 2rem;
   text-align: center;
 }

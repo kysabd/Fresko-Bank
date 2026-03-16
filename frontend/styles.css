@@ -1,0 +1,82 @@
+:root {
+  --bg: #e8eef5;
+  --card: #ffffff;
+  --text: #1f2a38;
+  --accent: #1565c0;
+  --accent-dark: #0f4a91;
+  --muted: #667788;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #cfd9e8 0%, #eaf0f8 100%);
+}
+.page-wrapper {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+.login-card {
+  width: min(380px, 95vw);
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(34, 49, 77, 0.2);
+  padding: 2rem;
+  text-align: center;
+}
+.login-card h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+.login-card p {
+  margin: 0.4rem 0 1.2rem;
+  color: var(--muted);
+}
+.login-form {
+  display: grid;
+  gap: 0.75rem;
+}
+.login-form label {
+  text-align: left;
+  font-size: 0.85rem;
+  color: #5b6b7f;
+}
+.login-form input {
+  width: 100%;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid #cdd9e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+.login-form input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.15);
+}
+.login-form button {
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.login-form button:hover {
+  background: var(--accent-dark);
+}
+.login-form button:active {
+  transform: translateY(1px);
+}
+.hint {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
